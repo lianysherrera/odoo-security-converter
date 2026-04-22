@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Odoo <span>Security</span> CSV → XML</h1>
+        <p>ir.model.access converter</p>
+    </header>
+    <main>
+        <div class="panel">
+            <div class="panel-header">
+            <span class="panel-label"><span></span>CSV input</span>
+            <button class="btn-small" onclick="loadExample()">cargar ejemplo</button>
+            </div>
+            <textarea id="input" spellcheck="false"
+            placeholder="Pega aquí tu CSV de seguridad de Odoo...
+            
+            Ejemplo:
+            id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+            access_sale_order,sale.order,model_sale_order,sales_team.group_sale_salesman,1,1,1,0"></textarea>
+            <div class="error-box" id="error-box"></div>
+        </div>
+        <div class="panel">
+            <div class="panel-header">
+            <span class="panel-label out"><span></span>XML output</span>
+            <button class="btn-small" onclick="copyXml()">copiar XML</button>
+            </div>
+            <textarea id="output" readonly spellcheck="false"
+            placeholder="El XML aparecerá aquí automáticamente..."></textarea>
+        </div>
+    </main>
+    <footer>
+        <span class="status" id="status">esperando input...</span>
+        <span class="hint">escribe o pega el CSV y el XML se genera solo</span>
+    </footer>
+</body>
+</html>
