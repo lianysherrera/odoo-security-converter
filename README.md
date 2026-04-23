@@ -33,7 +33,6 @@ group_library_manager,Library Manager,base.module_category_hidden,group_library_
 id,name,login,email,groups_id:id
 user_library_1,Usuario Biblioteca,user1,user1@example.com,group_library_user
 ```
+## Uso
 
-## Licencia
-
-MIT
+Accede directamente en: **https://lianysherrera.github.io/odoo-security-converter/**
