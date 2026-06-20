@@ -6,8 +6,8 @@
     --surface: #16161a;
     --surface2: #1e1e24;
     --border: #2a2a35;
-    --accent: #7c5cfc;
-    --accent2: #00e5a0;
+    --accent: #875A7B;
+    --accent2: #00A09D;
     --text: #e8e8f0;
     --muted: #6b6b80;
     --danger: #ff4d6d;
@@ -102,6 +102,11 @@ main {
     color: var(--accent2);
 }
 .btn-small:active { transform: scale(0.97); }
+.btn-copy.copied {
+    border-color: var(--accent2);
+    color: var(--accent2);
+    pointer-events: none;
+}
 textarea {
     flex: 1;
     min-height: 420px;

@@ -60,10 +60,14 @@ function setStatus(msg, cls) {
 
 function copyXml() {
   if (!outputEl.value) return;
+  const btn = document.querySelector('.btn-copy');
   navigator.clipboard.writeText(outputEl.value).then(() => {
-    const btn = event.target;
-    btn.textContent = '¡copiado!';
-    setTimeout(() => btn.textContent = 'copiar XML', 1500);
+    btn.classList.add('copied');
+    btn.innerHTML = '&#10003; copiado';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.textContent = 'copiar XML';
+    }, 1800);
   });
 }
 
